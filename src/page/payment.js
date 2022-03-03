@@ -56,8 +56,6 @@ const MakePayment = () => {
         return true
       case isEmpty(Amount):
         return true
-      case !isEmpty(inputErrors):
-        return true
       default:
         return false
     }
@@ -127,6 +125,7 @@ const MakePayment = () => {
         >
           <Input
             name="CardNumber"
+            type="number"
             value={state.CardNumber}
             onChange={handleOnChange}
             placeholder="Input your card number"
@@ -166,6 +165,7 @@ const MakePayment = () => {
           ]}
         >
           <Input
+            type="number"
             name="Cvv"
             value={state.Cvv}
             onChange={handleOnChange}
@@ -186,6 +186,7 @@ const MakePayment = () => {
           ]}
         >
           <Input
+            type="number"
             name="Amount"
             value={state.Amount}
             onChange={handleOnChange}
